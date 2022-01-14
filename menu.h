@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void printStudent(struct Student (*students)[], int size)
+void printStudent(struct Student students[], int size)
 {
     printf("---------------------------\n");
     printf("Students are \n");
@@ -10,11 +10,11 @@ void printStudent(struct Student (*students)[], int size)
         printf("Name %s\n"
                "Roll No %d\n"
                "---------------------------\n",
-               (*students)[i].name, (*students)[i].rollNo);
+               students[i].name, students[i].rollNo);
     }
 }
 
-void menu(struct Student (*students)[], int size)
+void menu(struct Student students[], int size)
 {
     printf("Enter sort algo\n"
            "1. Merge Sort\n"

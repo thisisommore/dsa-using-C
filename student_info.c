@@ -21,6 +21,5 @@ void main()
         scanf("%d", &students[i].rollNo);
         printf("\n");
     }
-    struct Student(*pStudents)[] = &students;
-    menu(pStudents, numberOfStudents);
+    menu(students, numberOfStudents);
 }
