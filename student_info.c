@@ -3,6 +3,8 @@
 #include "./quicksort/sort.h"
 #include "./menu.h"
 #include <stdio.h>
+#include <conio.h>
+#include <string.h>
 
 void main()
 {
@@ -15,7 +17,11 @@ void main()
     {
         printf("Enter details of student number %d\n", i + 1);
         printf("Name - ");
-        scanf("%s", &students[i].name);
+        fflush(stdin);
+        fgets(students[i].name, 30, stdin);
+
+        //Remove new line from name
+        students[i].name[strcspn(students[i].name, "\n")] = 0;
 
         printf("Roll no - ");
         scanf("%d", &students[i].rollNo);
