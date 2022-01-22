@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include "stack.h"
 #include "print.h"
-#include <math.h>
+
 void main()
 {
     printf("Enter number of elements to push in stack - ");
+
     int count = 0;
     scanf("%d", &count);
+    if (count < 0)
+    {
+        printf("Positive number is required, instead got %d\n", count);
+        return;
+    }
     for (int i = 0; i < count; i++)
     {
         push();
